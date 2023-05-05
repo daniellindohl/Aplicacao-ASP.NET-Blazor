@@ -1,12 +1,45 @@
 ﻿@page "/counter"
 
-<PageTitle>Counter</PageTitle>
+<PageTitle>Ordens de serviço diário</PageTitle>
 
-<h1>Counter</h1>
+<h1>Ordem de Serviço</h1>
+
+<form>
+    <fieldset>
+        <h4>Entrada ou saída do veículo?</h4>
+        <p>
+            <input type="radio" name="size" id="size_1" value="small" />
+            <label for="size_1">Entrou para manutenção</label>
+        </p>
+        <p>
+            <input type="radio" name="size" id="size_2" value="medium" />
+            <label for="size_2">Saiu da manutenção</label>
+        </p>
+    </fieldset>
+</form>
+
+<p><label>Proprietário:<input type="text" id="User" name="Name" /></label>
+<label>Placa:<input type="text" id="User" name="Name" /></label>
+<label>Telefone:<input type="tel" id="User" name="Name" /></label>
+</p>
+<p><label>Data: <input type="date" id="User" name="Name" /></label>
+<label>Hora de entrada: <input type="time" id="User" name="Name" /></label>
+<label>Hora de saída: <input type="time" id="User" name="Name" /></label>
+</p>
+<p><label>Problemas Relatados: <input type="t" id="User" name="Name" /></label></p>
+<p><label>Nota de serviço: <input type="tel" id="User" name="Name" /></label></p>
+
+<p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">Adicionar</button>
+<button class="btn btn-primary" @onclick="IncrementCount">Editar</button>
+<button class="btn btn-primary" @onclick="IncrementCount">Excluir</button>
+
+</p>
+
+<h4>Ordens do dia: </h4>
 
 <p role="status">Current count: @currentCount</p>
-
-<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
 
 @code {
     private int currentCount = 0;
