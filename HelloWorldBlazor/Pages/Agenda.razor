@@ -1,0 +1,43 @@
+﻿@page "/Agenda"
+
+<PageTitle>Agenda</PageTitle>
+
+<h5>Dados: </h5>
+<p>
+    <label>Proprietário: <input type="text" id="User" name="Name" cols="50" /></label>
+</p>
+<p>
+    <label>Placa: <input type="text" id="User" name="Name" cols="50" /></label>
+</p>
+<p>
+    <label>Telefone: <input type="tel" id="User" name="Name" cols="50" /></label>
+</p>
+<p>
+    <label>Data: <input type="date" id="User" name="Name" /></label>
+</p>
+<p>
+    <label>Hora: <input type="time" id="User" name="Name" /></label>
+</p>
+<h5>Problemas relatados: </h5>
+<textarea id="problemas" name="problemas" rows="7" cols="70"></textarea>
+
+<p>
+
+    <button class="btn btn-primary" @onclick="IncrementCount">Adicionar</button>
+    <button class="btn btn-primary" @onclick="IncrementCount">Editar</button>
+    <button class="btn btn-primary" @onclick="IncrementCount">Excluir</button>
+
+</p>
+
+<h4>Agenda</h4>
+
+<p role="status">Current count: @currentCount</p>
+
+@code {
+    private int currentCount = 0;
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+}
